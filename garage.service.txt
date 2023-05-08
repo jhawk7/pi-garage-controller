@@ -1,0 +1,15 @@
+[Service]
+WorkingDirectory=/home/pi/dev/garage-controller
+ExecStart=/home/pi/dev/garage-controller/start_app.sh
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=garage
+User=root
+Group=root
+Environment=FLASK_APP=garage_app.py
+[Install]
+WantedBy=multi-user.target
+
+
+#make sure all pkgs are installed for sudo user (service runs as sudo user)

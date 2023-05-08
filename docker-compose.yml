@@ -1,0 +1,8 @@
+services:
+  pi-garage-ctrl:
+    image: jhawk7/pi-garage-ctrl
+    build: .
+    ports: 
+      - "8080:8080"
+    restart: always
+    privileged: true
